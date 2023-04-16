@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flirting Messages Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #0300b4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00559b;
+        }
+
+        .message {
+            margin: 30px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            font-size: 24px;
+            color: #333;
+            background-color: #fff;
+            border: 2px solid #000c79;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            color: #333;
+        }
+
+        h4 {
+            margin-bottom: -10px;
+        }
+
+        a {
+            color: #008cff;
+        }
+
+        .img {
+            text-align: center;
+            margin-bottom: -40px;
+        }
+
+        img {
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img">
+        <img src="./flirt.png" alt="icon">
+    </div>
+    <h1>Flirting Messages Generator</h1>
+    <div class="message">Hey</div>
+    <button>Generate Message</button>
+
+    <p>
+        This Web App is a fun little app that generates random love messages
+        for you to use as pick-up line, a sweet gesture, or just to make someone smile.
+    </p>
+
+    <p>
+        Give it a try and see what messages fate has in store for you!
+    </p>
+
+    <footer>
+        <h4>Created By Ali</h4>
+        <h4><a href="">Follow me on Twitter</a></h4>
+    </footer>
+
+    <script>
+        const messages = [
+            "Do you have a map? I keep getting lost in your eyes.",
+            "Excuse me, but I think you dropped something: my jaw.",
+            "If I could rearrange the alphabet, I’d put ‘U’ and ‘I’ together.",
+            "Are you a magician? Because whenever I look at you, everyone else disappears.",
+            "Do you believe in love at first sight, or should I walk by again?",
+            "If you were a vegetable, you’d be a cutecumber.",
+            "I must be lost because heaven is a long way from here.",
+            "I’m not a photographer, but I can definitely picture us together.",
+            "You must be tired because you’ve been running through my mind all night.",
+            "If I were a cat I’d spend all 9 lives with you.",
+            "You must be a magician because every time I look at you, everyone else disappears.",
+            "Can I follow you where you go? Because my parents always told me to follow my dreams.",
+            "If you were a library book, I’d check you out.",
+            "Do you have a Band-Aid? Because I just scraped my knee falling for you.",
+            "Is it hot in here or is it just you?",
+            "Are you a time traveler? Because I can’t imagine my future without you in it.",
+            "Do you know what my shirt is made of? Boyfriend material.",
+            "Are you lost? Because heaven is a long way from here.",
+            "I must be a snowflake, because I've fallen for you.",
+            "Are you a magician? Because every time I look at you, everyone else disappears.",
+            "Do you know what's on the menu tonight? Me-n-u.",
+            "Is your name Ariel? Because we Mermaid for each other.",
+            "Do you have a sunburn, or are you always this hot?",
+            "If I were to ask you out on a date, would your answer be the same as the answer to this question?",
+            "You must be a magician, because every time I look at you, everyone else disappears.",
+            "Excuse me, but I think you dropped something... my jaw.",
+            "You're so beautiful, you make me forget my pick-up line.",
+            "Do you have a map? I keep getting lost in your smile.",
+            "Can I follow you home? Because my parents always told me to follow my dreams.",
+            "Excuse me, but you have something on your face, it's just the most beautiful smile I've ever seen.",
+            "If you were a fruit, you'd be a fineapple.", "Are you a bank loan? Because you have my interest.",
+            "I'm not saying you're the best catch out there, but you're definitely a catch worth keeping.",
+            "If beauty were a crime, you'd be serving a life sentence.",
+            "Are you an angel? Because you have a halo effect on me.",
+            "You must be a magician because every time I look at you, everyone else disappears.",
+            "Can I follow you where you go? Because my parents always told me to follow my dreams.",
+            "If you were a library book, I’d check you out.",
+            "Are you lost? Because heaven is a long way from here.",
+            "I must be a snowflake, because I've fallen for you.",
+            "Are you a magician? Because every time I look at you, everyone else disappears.",
+            "Excuse me, do you have a name or can I call you mine?",
+            "Is your name Google? Because you have everything I've been searching for.",
+            "Do you have a magnet in your pocket? Because I'm attracted to you.",
+            "I hope you know CPR, because you just took my breath away.",
+            "I don't have a library card, but do you mind if I check you out?",
+            "You must be tired because you've been running through my mind all day.",
+            "I must be a snowman, because I've got chills just looking at you.",
+            "Excuse me, but I think you dropped something: my jaw.",
+            "Do you have a Band-Aid? Because I just scraped my knee falling for you.",
+            "If you were a vegetable, you'd be a cutecumber.",
+            "Excuse me, but you seem to be in my dreams every night.",
+            "Do you believe in love at first sight, or should I walk by again?",
+            "You must be a ninja because you snuck up on me and stole my heart.",
+            "Are you a magician? Because every time I look at you, everyone else disappears.",
+            "I must be a snowflake, because I've fallen for you.",
+            "Are you a UFO? Because you just abducted my heart.",
+            "Can I take a picture of you so I can show Santa what I want for Christmas?",
+            "You must be a shooting star, because I'm making a wish upon you.",
+            "Is your name Wi-Fi? Because I'm feeling a strong connection.",
+            "Do you have a map? I just keep getting lost in your eyes.",
+            "You're like a dictionary - you add meaning to my life."
+        ];
+
+        let lastMessageIndex = -1;
+
+        function generateRandomMessage() {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * messages.length);
+            } while (randomIndex === lastMessageIndex);
+
+            lastMessageIndex = randomIndex;
+            return messages[randomIndex];
+        }
+
+        const button = document.querySelector('button');
+        const messageArea = document.querySelector('.message');
+
+        button.addEventListener('click', () => {
+            const message = generateRandomMessage();
+            messageArea.textContent = message;
+        });
+    </script>
+</body>
+
+</html>
